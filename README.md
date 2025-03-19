@@ -68,7 +68,7 @@ The experiments were conducted using the Windows 11 OS equipped with a 32-core C
 | ImageNet       | https://image-net.org                                    | `./Neural_networks/data/imagenet/` |
 
 Ensure that each dataset is downloaded and placed in its corresponding directory before running the experiments.
->Note: For the ImageNet dataset, first ensure that the [dataset](https://image-net.org) has been downloaded. Then, run [datadeal.py](./Neural_networks/datadeal.py) to split it into the training set and the test set, respectively. Finally, place them in the `./Neural_networks/data/imagenet/train` directory and the `./Neural_networks/data/imagenet/val` directory, respectively. 
+>Note: For the ImageNet dataset, first ensure that the [dataset](https://image-net.org) has been downloaded. Then, run [datadeal.py](./Neural_networks/datadeal.py) to split it into a training set and a test set, respectively. Finally, place them in the `./Neural_networks/data/imagenet/train` directory and the `./Neural_networks/data/imagenet/val` directory, respectively. 
 
 ## Logistic regression
 1. You can use the following command to execute Algorithm 1 for the logistic regression task:
