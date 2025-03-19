@@ -174,29 +174,32 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
 1. You can use the following command to execute Algorithm 1 for the conventional neural network training task on the CIFAR-10 dataset:
    ```shell
    python main.py --test_num 0 --epochs 70 --batch_size 128 --dataset 'cifar10'
-   ```  
+   ```
+   >Note: Before running the script, please ensure that the [`CIFAR-10`](https://www.cs.toronto.edu/~kriz/cifar.html) dataset has been downloaded and placed in the `./Neural_networks/data` directory.
+   
+   ![Cifar10](./figures/cifar10_execution.gif)
+   
    - `--test_num`: specifies the optimization algorithm to be trained: `0`:Algorithm 3; `1`: DADAM [R3]; `2`: DAMSGrad [R4]; `3`: DSGD-N [R5]; `4`: ATC-DIGing [R6]; `5`: DSGD [R2].
    - `--epochs`: sets the number of training epochs.
    - `--batch_size`: sets the batch size for training.
    - `--dataset`: specifies the dataset to be used for training. The default option is 'cifar10'.
-  
-   >Note: Before running the script, please ensure that the [`CIFAR-10`](https://www.cs.toronto.edu/~kriz/cifar.html) dataset has been downloaded and placed in the `./Neural_networks/data` directory.
 
-2. To execute Algorithm 3 with a desired number of local updates Q (e.g., Q=15), you can run the following command:
+   
+1. To execute Algorithm 3 with a desired number of local updates Q (e.g., Q=15), you can run the following command:
    ```shell
    python main.py --test_num 0 --epochs 70 --batch_size 128 --dataset 'cifar10' --const_q 15
    ```
-3. To specify the print interval (e.g., printing the training loss, test loss, and test accuracy every 10 iterations), you can run the following command:
+2. To specify the print interval (e.g., printing the training loss, test loss, and test accuracy every 10 iterations), you can run the following command:
    ```shell
    python main.py --test_num 0 --epochs 70 --batch_size 128 --dataset 'cifar10' --interval 10
    ```
-4. To specify the random seed used in training (e.g., setting seed=42), you can run the following command:
+3. To specify the random seed used in training (e.g., setting seed=42), you can run the following command:
    ```shell
    python main.py --test_num 0 --epochs 70 --batch_size 128 --dataset 'cifar10' --seed 42
    ```
-5. In this experiment, we employed a four-layer CNN architecture, where the LeakyReLU activation function and batch normalization are applied to every layer. This architecture comprises two convolutional blocks: the first block consists of a 32-filter convolution layer with dropout (rate 0.3), followed by a 64-filter convolution layer with dropout (rate 0.1) and a max pooling layer; the second block consists of two 128-filter convolution layers, with the latter followed by a max pooling layer, a global average pooling, and a fully connected layer.
+4. In this experiment, we employed a four-layer CNN architecture, where the LeakyReLU activation function and batch normalization are applied to every layer. This architecture comprises two convolutional blocks: the first block consists of a 32-filter convolution layer with dropout (rate 0.3), followed by a 64-filter convolution layer with dropout (rate 0.1) and a max pooling layer; the second block consists of two 128-filter convolution layers, with the latter followed by a max pooling layer, a global average pooling, and a fully connected layer.
 
-6. The learning-rate parameters for DADAM [R3], DAMSGrad [R4], and DSGD with Nesterov’s momentum [R5] (called DSGD-N) were set to $\eta=0.005$, $\eta=0.1$, and $\eta=0.5$, respectively, after systematic tuning. We provide the performance of these algorithms under the tried parameters in the tuning process in the following Table S2, with the best value highlighted in bold:
+5. The learning-rate parameters for DADAM [R3], DAMSGrad [R4], and DSGD with Nesterov’s momentum [R5] (called DSGD-N) were set to $\eta=0.005$, $\eta=0.1$, and $\eta=0.5$, respectively, after systematic tuning. We provide the performance of these algorithms under the tried parameters in the tuning process in the following Table S2, with the best value highlighted in bold:
    
 <table>
    <caption><b>Table S2</b> Test accuracies of Algorithm 3, DADAM [R3], DAMSGrad [R4], and DSGD-N [R5] under different learning-rate parameters after 70 epochs in the CNN experiment using the CIFAR-10 dataset.</caption>
