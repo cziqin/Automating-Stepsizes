@@ -78,7 +78,7 @@ Ensure that each dataset is downloaded and placed in its corresponding directory
    > Note: Please change the directory to [`./Logistic_regression`](./Logistic_regression) before running the above command.
 
    ![Mushroom](./figures/mushrooms_execution.gif)
-   - `--test_num`: specify which optimization algorithm to train: `0`:Algorithm 1; `1`: Algorithm 2; `2`: DGM-BB-C [R1]; `3`: DGD [R2].
+   - `--test_num`: specify which optimization algorithm to use: `0`:Algorithm 1; `1`: Algorithm 2; `2`: DGM-BB-C [R1]; `3`: DGD [R2].
    - `--iterations`: set the number of total training iterations.
 2. To execute Algorithm 2 with a desired number of inner-consensus-loop iterations K (e.g., K=10), you can run the following command:
    ```shell
@@ -123,7 +123,7 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
    > Note: Please change the directory to [`./Matrix_factorization`](./Matrix_factorization) before running the above command.
    
    ![Matrix](./figures/Matrix_factorization_execution.gif)
-   - `--test_num`: specify which optimization algorithm to train: `0`:Algorithm 1; `1`: Algorithm 2; `2`: DGM-BB-C; `3`: DGD.
+   - `--test_num`: specify which optimization algorithm to use: `0`:Algorithm 1; `1`: Algorithm 2; `2`: DGM-BB-C; `3`: DGD.
    - `--iterations`: set the number of training iterations.
 2. To execute Algorithm 2 with a desired number of inner-consensus-loop iterations K (e.g., K=10), you can run the following command:
    ```shell
@@ -176,7 +176,7 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
    python main.py --test_num 0 --epochs 70 --batch_size 128 --dataset 'cifar10'
    ```
    
-   - `--test_num`: specify the optimization algorithm to be trained: `0`:Algorithm 3; `1`: DADAM [R3]; `2`: DAMSGrad [R4]; `3`: DSGD-N [R5]; `4`: ATC-DIGing [R6]; `5`: DSGD [R2].
+   - `--test_num`: specify the optimization algorithm to use: `0`:Algorithm 3; `1`: DADAM [R3]; `2`: DAMSGrad [R4]; `3`: DSGD-N [R5]; `4`: ATC-DIGing [R6]; `5`: DSGD [R2].
    - `--epochs`: set the number of training epochs.
    - `--batch_size`: set the batch size for training.
    - `--dataset`: specify the dataset to be used for training. The default option is 'cifar10'.
@@ -271,7 +271,7 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
    ```shell
    python main.py --test_num 0 --epochs 10 --batch_size 128 --dataset 'imagenet'
    ```
-   - `--test_num`: specify the optimization algorithm to be trained: `0`:Algorithm 3; `1`: DADAM [R3]; `2`: DAMSGrad [R4]; `3`: DSGD-N [R5]; `4`: ATC-DIGing [R6]; `5`: DSGD [R2].
+   - `--test_num`: specify the optimization algorithm to use: `0`:Algorithm 3; `1`: DADAM [R3]; `2`: DAMSGrad [R4]; `3`: DSGD-N [R5]; `4`: ATC-DIGing [R6]; `5`: DSGD [R2].
    - `--epochs`: set the number of training epochs.
    - `--batch_size`: set the batch size for training.
    - `--dataset`: specify the dataset to be used for training. The default option is 'cifar10'.
