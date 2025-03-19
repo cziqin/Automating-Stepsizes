@@ -171,7 +171,7 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
 ## Neural network training
 > Note: Please change the directory to [`./Neural_networks`](./Neural_networks) before running the following commands.
 ### CIFAR-10
-1. You can use the following command to execute Algorithm 1 for the conventional neural network training task on the CIFAR-10 dataset:
+1. You can use the following command to execute Algorithm 1 for the conventional neural network (CNN) training task on the CIFAR-10 dataset:
    ```shell
    python main.py --test_num 0 --epochs 70 --batch_size 128 --dataset 'cifar10'
    ```
