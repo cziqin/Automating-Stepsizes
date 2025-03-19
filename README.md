@@ -15,7 +15,7 @@ We propose an approach that allows individual agents to autonomously adapt their
 
 ## Installation Tutorial and Preliminaries
 ### Install Setup
-1. Clone this [repository](https://github.com/cziqin/Automating-Stepsize/tree/main)
+1. Clone this [repository](https://github.com/cziqin/Automating-Stepsizes/tree/main)
 2. Download and install [Anaconda](https://www.anaconda.com) (if you don't have it already)
 3. Create a new virtual environment with python 3.12, take conda as an example:
    ```shell
