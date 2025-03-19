@@ -105,7 +105,7 @@ Ensure that each dataset is downloaded and placed in its corresponding directory
 </div>
 
 - <b>Fig. a</b> The loss evolution of Algorithm 1, Algorithm 2 (with K=1 and K=10, respectively), Algorithm 3 (with Q=10), DGM-BB-C [R1], and DGD [R2], respectively. 
-- <b>Fig. b</b> and <b>Fig. c</b> The scatter and box plots of the average stepsize of five agents across the six algorithms. Box plots show the median, 1st and 3rd quartiles, and 5th to 95th percentiles. Pvalues
+- <b>Fig. b</b> and <b>Fig. c</b> The scatter and box plots of the average stepsize of five agents across the six algorithms. Box plots show the median, 1st and 3rd quartiles, and 5th to 95th percentiles. P-values
 were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple comparison test.
 - <b>Fig. d</b> The loss evolution of Algorithm 3 under different numbers of local iterations Q with respect to communication rounds.
 - <b>Fig. e</b> The loss evolution of Algorithm 1, Algorithm 2 (with K=1 and K=10, respectively), Algorithm 3 (with Q=10), DGM-BB-C, and DGD, respectively, with respect to communication rounds. 
