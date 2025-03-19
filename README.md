@@ -158,8 +158,7 @@ the best value highlighted in bold. The stepsize upper bound for DGM-BB-C [R1] w
 </div>
 
 - <b>Fig. a</b> The loss evolution of Algorithm 1, Algorithm 2 (with K=1 and K=10, respectively), Algorithm 3 (with Q=5), DGM-BB-C [R1], and DGD [R2], respectively. 
-- <b>Fig. b</b> and <b>Fig. c</b> The scatter and box plots of the average stepsize of five agents across the six algorithms. Box plots show the median, 1st and 3rd quartiles, and 5th to 95th percentiles. Pvalues
-were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple comparison test.
+- <b>Fig. b</b> and <b>Fig. c</b> The scatter and box plots of the average stepsize of five agents across the six algorithms. Box plots show the median, 1st and 3rd quartiles, and 5th to 95th percentiles. P-values were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple comparison test.
 - <b>Fig. d</b> The loss evolution of Algorithm 3 under different numbers of local iterations Q with respect to communication rounds.
 - <b>Fig. e</b> The loss evolution of Algorithm 1, Algorithm 2 (with K=1 and K=10, respectively), Algorithm 3 (with Q=5), DGM-BB-C, and DGD, respectively, with respect to communication rounds. 
 - <b>Fig. f</b> The used wallclock time and associated loss of Algorithm 1, Algorithm 2 (with K=1 and K=10, respectively), Algorithm 3 (with Q=5), DGM-BB-C, and DGD, respectively.
