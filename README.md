@@ -267,7 +267,7 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
 > Note: Training parameters include a batch size of 128 and training durations of 70 epochs. We evaluated the stability and effectiveness of our algorithm and comparison algorithms using 95% confidence intervals derived from 3 runs under different random seeds: 42, 2024, and 1010. All experimental results (e.g., training loss, test loss, and test accuracy) will be automatically saved as `.csv` files in the `./Neural_networks/results` directory.
 
 ### ImageNet
-1. You can use the following command to execute Algorithm 3 for the conventional neural network (CNN) training task on the "ImageNet" dataset:
+1. You can use the following command to execute Algorithm 3 for the conventional neural network (CNN) training task on the ImageNet dataset:
    ```shell
    python main.py --test_num 0 --epochs 10 --batch_size 128 --dataset 'imagenet'
    ```
