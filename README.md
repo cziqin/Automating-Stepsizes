@@ -175,7 +175,7 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
    ```shell
    python main.py --test_num 0 --epochs 70 --batch_size 128 --dataset 'cifar10'
    ```
-   > Note: Before running the script, please ensure that the [`CIFAR-10`](https://www.cs.toronto.edu/~kriz/cifar.html) dataset has been downloaded and placed in the `./Neural_networks/data` directory.
+   > Note: Before running the command, please ensure that the [`CIFAR-10`](https://www.cs.toronto.edu/~kriz/cifar.html) dataset has been downloaded and placed in the `./Neural_networks/data` directory.
    
    - `--test_num`: specify the optimization algorithm to use: `0`:Algorithm 3; `1`: DADAM [R3]; `2`: DAMSGrad [R4]; `3`: DSGD-N [R5]; `4`: ATC-DIGing [R6]; `5`: DSGD [R2].
    - `--epochs`: set the number of training epochs.
@@ -270,14 +270,13 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
    ```shell
    python main.py --test_num 0 --epochs 10 --batch_size 128 --dataset 'imagenet'
    ```
+   > Note: Before running the command, please ensure that the [`ImageNet`](https://image-net.org) dataset has been downloaded and splited. Moreover, please ensure that the training and test sets are placed in the `./Neural_networks/data/imagenet/train` and `./Neural_networks/data/imagenet/sort_val` directories, respectively.
+
    - `--test_num`: specify the optimization algorithm to use: `0`:Algorithm 3; `1`: DADAM [R3]; `2`: DAMSGrad [R4]; `3`: DSGD-N [R5]; `4`: ATC-DIGing [R6]; `5`: DSGD [R2].
    - `--epochs`: set the number of training epochs.
    - `--batch_size`: set the batch size for training.
    - `--dataset`: specify the dataset to be used for training. The default option is 'cifar10'.
   
-   >Note: Before running the script, please ensure that the [`ImageNet`](https://image-net.org) dataset has been downloaded and splited. Moreover, please ensure that the training and test sets are placed in    
-    the `./Neural_networks/data/imagenet/train` and `./Neural_networks/data/imagenet/sort_val` directories, respectively.
-
 2. To execute Algorithm 3 with a desired number of asynchronous-parallel-update iterations Q (e.g., Q=25), you can run the following command:
    ```shell
    python main.py --test_num 0 --epochs 10 --batch_size 128 --dataset 'imagenet' --const_q 25
