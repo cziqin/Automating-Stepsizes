@@ -270,7 +270,7 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
    ```shell
    python main.py --test_num 0 --epochs 10 --batch_size 128 --dataset 'imagenet'
    ```
-   > Note: Before running the command, please ensure that the [`ImageNet`](https://image-net.org) dataset has been downloaded and splited into a training set and a test set. Moreover, please ensure that the training and test sets are placed in the `./Neural_networks/data/imagenet/train` and `./Neural_networks/data/imagenet/sort_val` directories, respectively.
+   > Note: Before running the command, please ensure that the [`ImageNet`](https://image-net.org) dataset has been downloaded and splited into a training set and a test set. Moreover, please ensure that the training and test sets are placed in the `./Neural_networks/data/imagenet/train` and `./Neural_networks/data/imagenet/val` directories, respectively.
 
    - `--test_num`: specify the optimization algorithm to use: `0`:Algorithm 3; `1`: DADAM [R3]; `2`: DAMSGrad [R4]; `3`: DSGD-N [R5]; `4`: ATC-DIGing [R6]; `5`: DSGD [R2].
    - `--epochs`: set the number of training epochs.
