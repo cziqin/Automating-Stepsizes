@@ -68,7 +68,7 @@ The experiments were conducted using the Windows 11 OS equipped with a 32-core C
 | ImageNet       | https://image-net.org                                    | `./Neural_networks/data/imagenet/` |
 
 Ensure that each dataset is downloaded and placed in its corresponding directory before running the experiments.
->Note: For the ImageNet dataset, first ensure that the [dataset](https://image-net.org) has been downloaded. Then, run [datadeal.py](./Neural_networks/datadeal.py) to split it into a training set and a test set, respectively. Finally, place them in the `./Neural_networks/data/imagenet/train` directory and the `./Neural_networks/data/imagenet/val` directory, respectively. 
+>Note: For the ImageNet dataset, first ensure that the [dataset](https://image-net.org) has been downloaded. Then, run [datadeal.py](./Neural_networks/datadeal.py) to split it into a training set and a test set. Finally, place them in the `./Neural_networks/data/imagenet/train` directory and the `./Neural_networks/data/imagenet/val` directory, respectively. 
 
 ## Logistic regression
 1. You can use the following command to execute Algorithm 1 for the logistic regression task:
@@ -270,7 +270,7 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
    ```shell
    python main.py --test_num 0 --epochs 10 --batch_size 128 --dataset 'imagenet'
    ```
-   > Note: Before running the command, please ensure that the [`ImageNet`](https://image-net.org) dataset has been downloaded and splited. Moreover, please ensure that the training and test sets are placed in the `./Neural_networks/data/imagenet/train` and `./Neural_networks/data/imagenet/sort_val` directories, respectively.
+   > Note: Before running the command, please ensure that the [`ImageNet`](https://image-net.org) dataset has been downloaded and splited into a training set and a test set. Moreover, please ensure that the training and test sets are placed in the `./Neural_networks/data/imagenet/train` and `./Neural_networks/data/imagenet/sort_val` directories, respectively.
 
    - `--test_num`: specify the optimization algorithm to use: `0`:Algorithm 3; `1`: DADAM [R3]; `2`: DAMSGrad [R4]; `3`: DSGD-N [R5]; `4`: ATC-DIGing [R6]; `5`: DSGD [R2].
    - `--epochs`: set the number of training epochs.
