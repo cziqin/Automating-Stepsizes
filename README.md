@@ -62,7 +62,7 @@ The experiments were conducted using the Windows 11 OS equipped with a 32-core C
 ### Datasets
 | Datasets       | Download link                                            | Storage Location                   |
 |----------------|----------------------------------------------------------|------------------------------------|
-| Mushrooms      | https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/ | `./Logistic_regression/`           |
+| mushrooms      | https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/ | `./Logistic_regression/`           |
 | MovieLens 100k | https://grouplens.org/datasets/movielens/                | `./matrix_factorization/`          |
 | CIFAR-10       | https://www.cs.toronto.edu/~kriz/cifar.html              | `./Neural_networks/data/`          |
 | ImageNet       | https://image-net.org                                    | `./Neural_networks/data/imagenet/` |
