@@ -78,8 +78,8 @@ Ensure that each dataset is downloaded and placed in its corresponding directory
    > Note: Please change the directory to [`./Logistic_regression`](./Logistic_regression) before running the above command.
 
    ![Mushroom](./figures/mushrooms_execution.gif)
-   - `--test_num`: specifies which optimization algorithm to train: `0`:Algorithm 1; `1`: Algorithm 2; `2`: DGM-BB-C [R1]; `3`: DGD [R2].
-   - `--iterations`: sets the number of total training iterations.
+   - `--test_num`: specify which optimization algorithm to train: `0`:Algorithm 1; `1`: Algorithm 2; `2`: DGM-BB-C [R1]; `3`: DGD [R2].
+   - `--iterations`: set the number of total training iterations.
 2. To execute Algorithm 2 with a desired number of inner-consensus-loop iterations K (e.g., K=10), you can run the following command:
    ```shell
    python main.py --test_num 1 --iterations 1000 --k_loop 10
@@ -113,7 +113,7 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
 
 <b>Result discussion:</b> Fig. a demonstrates that Algorithm 1 has a better convergence accuracy compared with its single-loop variant (Algorithm 2 with K=1), its asynchronous-parallelupdate variant (Algorithm 3 with Q=10), the decentralized adaptive algorithm with Barzilai-Borwein stepsizes (DGM-BB-C) [R1], and DGD [R2]. Fig. e and Fig. f demonstrate that our Algorithm 1 requires fewer communication rounds and a shorter wallclock time to reach a given convergence accuracy compared with DGM-BB-C and DGD. Moreover, removing the inner-consensus loop (i.e., Algorithm 2 with K=1) or using asynchronous parallel updates (i.e., Algorithm 3 with Q=10) can reduce both communication complexity and the used wallclock time. Among all comparison algorithms, Algorithm 3 with Q=10 local updates in each communication round achieves the lowest communication overhead and shortest wallclock time. Nevertheless, a too large number of local updates in each communication round leads to degraded convergence accuracy, especially in the later stages of convergence, as shown in Fig. d.
 
-> Note: All experimental results (e.g., loss, wallclock time, and the average stepsize) will be autonomously saved as `.csv` files in the `./Logistic_regression/results` directory.
+> Note: All experimental results (e.g., loss, wallclock time, and the average stepsize) will be automatically saved as `.csv` files in the `./Logistic_regression/results` directory.
 
 ## Matrix factorization
 1. You can use the following command to execute Algorithm 1 for the matrix factorization task:
@@ -123,8 +123,8 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
    > Note: Please change the directory to [`./Matrix_factorization`](./Matrix_factorization) before running the above command.
    
    ![Matrix](./figures/Matrix_factorization_execution.gif)
-   - `--test_num`: specifies which optimization algorithm to train: `0`:Algorithm 1; `1`: Algorithm 2; `2`: DGM-BB-C; `3`: DGD.
-   - `--iterations`: sets the number of training iterations.
+   - `--test_num`: specify which optimization algorithm to train: `0`:Algorithm 1; `1`: Algorithm 2; `2`: DGM-BB-C; `3`: DGD.
+   - `--iterations`: set the number of training iterations.
 2. To execute Algorithm 2 with a desired number of inner-consensus-loop iterations K (e.g., K=10), you can run the following command:
    ```shell
    python main.py --test_num 1 --iterations 1000 --k_loop 10
@@ -166,7 +166,7 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
 
 <b>Result discussion:</b> Fig. a shows that even under nonconvex and nonsmooth objective functions, Algorithm 1 still outperforms DGD and DGM-BB-C. This better performance is attributed to a larger stepsize produced by our Algorithm 1, as illustrated in Fig. b and Fig. c. Fig. a also shows that Algorithm 2 with K=1 (i.e., Algorithm 2 without inner-consensus loops) leads to inferior performance compared with Algorithm 1. Although increasing K to 10 improves the convergence performance, it also results in an increase in communication complexity and the used wallclock time, as shown in Fig. e and Fig. f. In addition, Fig. d, Fig. e, and Fig. f demonstrate that Algorithm 3 with Q=5 achieves the lowest communication complexity and shortest wallclock time among all comparison algorithms. However, the reduced communication complexity in Algorithm 3 comes at the price of reduced convergence accuracy compared with algorithms that communicate every time when a gradient descent is conducted (for example, as shown in Fig. a, Algorithm 1, Algorithm 2 with K=1 and K=10, respectively, and DGM-BB-C that execute synchronous communication and computation have a higher convergence accuracy than Algorithm 3 with Q=5).
 
->Note: The loss value is presented using its base-10 logarithm for better visualization. In addition, all experimental results (e.g., loss, wallclock time, and the average stepsize) will be autonomously saved as `.csv` files in the `./Matrix_factorization/results` directory.
+>Note: The loss value is presented using its base-10 logarithm for better visualization. In addition, all experimental results (e.g., loss, wallclock time, and the average stepsize) will be automatically saved as `.csv` files in the `./Matrix_factorization/results` directory.
 
 ## Neural network training
 > Note: Please change the directory to [`./Neural_networks`](./Neural_networks) before running the following commands.
@@ -176,10 +176,10 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
    python main.py --test_num 0 --epochs 70 --batch_size 128 --dataset 'cifar10'
    ```
    
-   - `--test_num`: specifies the optimization algorithm to be trained: `0`:Algorithm 3; `1`: DADAM [R3]; `2`: DAMSGrad [R4]; `3`: DSGD-N [R5]; `4`: ATC-DIGing [R6]; `5`: DSGD [R2].
-   - `--epochs`: sets the number of training epochs.
-   - `--batch_size`: sets the batch size for training.
-   - `--dataset`: specifies the dataset to be used for training. The default option is 'cifar10'.
+   - `--test_num`: specify the optimization algorithm to be trained: `0`:Algorithm 3; `1`: DADAM [R3]; `2`: DAMSGrad [R4]; `3`: DSGD-N [R5]; `4`: ATC-DIGing [R6]; `5`: DSGD [R2].
+   - `--epochs`: set the number of training epochs.
+   - `--batch_size`: set the batch size for training.
+   - `--dataset`: specify the dataset to be used for training. The default option is 'cifar10'.
 
    >Note: Before running the script, please ensure that the [`CIFAR-10`](https://www.cs.toronto.edu/~kriz/cifar.html) dataset has been downloaded and placed in the `./Neural_networks/data` directory.
    
@@ -271,10 +271,10 @@ were calculated via one-way analysis of variance (ANOVA) with Tukey’s multiple
    ```shell
    python main.py --test_num 0 --epochs 10 --batch_size 128 --dataset 'imagenet'
    ```
-   - `--test_num`: specifies the optimization algorithm to be trained: `0`:Algorithm 3; `1`: DADAM [R3]; `2`: DAMSGrad [R4]; `3`: DSGD-N [R5]; `4`: ATC-DIGing [R6]; `5`: DSGD [R2].
-   - `--epochs`: sets the number of training epochs.
-   - `--batch_size`: sets the batch size for training.
-   - `--dataset`: specifies the dataset to be used for training. The default option is 'cifar10'.
+   - `--test_num`: specify the optimization algorithm to be trained: `0`:Algorithm 3; `1`: DADAM [R3]; `2`: DAMSGrad [R4]; `3`: DSGD-N [R5]; `4`: ATC-DIGing [R6]; `5`: DSGD [R2].
+   - `--epochs`: set the number of training epochs.
+   - `--batch_size`: set the batch size for training.
+   - `--dataset`: specify the dataset to be used for training. The default option is 'cifar10'.
   
    >Note: Before running the script, please ensure that the [`ImageNet`](https://image-net.org) dataset has been downloaded and splited. Moreover, please ensure that the training and test sets are placed in    
     the `./Neural_networks/data/imagenet/train` and `./Neural_networks/data/imagenet/sort_val` directories, respectively.
