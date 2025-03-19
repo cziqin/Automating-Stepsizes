@@ -36,7 +36,7 @@ The experiments were conducted using the Windows 11 OS equipped with a 32-core C
 │   ├── loss_function.py                # loss function 
 │   ├── main.py                         # entry point
 │   ├── matrix.py                       # communication operations
-│   ├── mushrooms                       # the mushrooms datasets
+│   ├── mushrooms                       # the mushrooms dataset
 │   ├── optimizer.py                    # optimization algorithms
 │   └── train.py                        # model training
 ├── Matirx_factorization                # directory for matrix factorization
