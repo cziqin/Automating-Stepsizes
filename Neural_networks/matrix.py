@@ -6,21 +6,16 @@ from numpy import ndarray
 from torch import Tensor
 
 def cycle_graph(m):
-    # Initialize the matrix with zeros
     W = np.zeros((m, m))
-
-    # Set diagonal elements (self-connections)
     np.fill_diagonal(W, 0.4)
 
-    # Set adjacent connections in a cycle
     for i in range(m):
-        W[i, (i + 1) % m] = 0.3  # Connection to next node
-        W[i, (i - 1 + m) % m] = 0.3  # Connection to previous node
+        W[i, (i + 1) % m] = 0.3 
+        W[i, (i - 1 + m) % m] = 0.3 
 
     return W
 
 def fully_connected_graph(num_agents, weight):
-    # Create an array of ones with the shape (num_agents, num_agents)
     W = np.ones((num_agents, num_agents))
 
     # Multiply the whole matrix by the weight
