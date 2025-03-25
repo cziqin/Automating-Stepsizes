@@ -17,8 +17,6 @@ def cycle_graph(m):
 
 def fully_connected_graph(num_agents, weight):
     W = np.ones((num_agents, num_agents))
-
-    # Multiply the whole matrix by the weight
     W *= weight
 
     return W
